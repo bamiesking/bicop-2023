@@ -1,0 +1,3 @@
+[submodule "plots"]
+	path = plots
+	url = git@github.com:bamiesking/bicop-2023-plots
