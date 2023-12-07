@@ -1,8 +1,9 @@
 #import "theme.typ": conf, author, primary, secondary
 // #show: doc => conf(title, authors, affiliations )
 
-#set text(font: "Raleway", size: 19pt)
-#show figure.caption: set text(font: "Lato", size: 16pt)
+#set text(font: "Raleway", size: 20.5pt)
+#set par(leading: 0.5em)
+#show figure.caption: set text(font: "Lato", size: 17pt)
 
 #let authors = (
   (
@@ -95,7 +96,19 @@
     block(width: 2%),
     block(width: 25%)[
       #set align(center + horizon);
-      #image("images/UOY_Logo.png", width: 16.6cm);
+      #stack(dir: ttb,
+        block(height: 1cm),
+        image("images/UOY_Logo.png", width: 16.6cm),
+        block(height: 0.5cm),
+        stack(dir: ltr,
+          image("images/QCHub_Logo.png", width: 6.5cm),
+          block(width: 1cm),
+          align(right)[
+            #image("images/euNetworks_logo.svg", width: 6.5cm)
+          ]
+        ),
+        block(height: 2cm)
+      )
     ],
     block(width: 5%),
     block(width: 65%)[
@@ -103,10 +116,11 @@
       #stack(dir: ttb,
         block(height: 50%)[
           #set text(fill: white, size: 40pt, weight: "bold")
-          Feasibility of direct quantum communications between the UK and Ireland via 224~km of underwater fibre
+          Feasibility of quantum communications between the UK and Ireland via 224~km of underwater fibre
         ],
         block(height: 30%)[
           #stack(dir: ltr,
+            block(width: 2cm),
             block(width: 58%)[
               #set text(fill: white, size: 17pt)
               #for (i, a) in authors.enumerate() {
@@ -120,7 +134,7 @@
               }
 
             ],
-            block(width: 5%),
+            block(width: 3%),
             block(width: 50%)[
               #set text(fill: white, size: 17pt)
               #set align(left)
@@ -158,8 +172,8 @@
       #block(width: 80%, height: auto, fill: secondary, inset: 1cm)[
         #section("Abstract")[
           #set text(size: 22pt)
-          The future of Quantum Key Distribution (QKD) is contingent on its ability to utilise the existing fibre infrastructure that makes up the global Internet. In this work, we explore the feasibility of quantum communications over 224~km of submarine fibre between the UK and Ireland. We characterise differential phase drift, polarisation stability and entangled photon arrival times to demonstrate the suitability of this fibre for several common implementations of QKD. 
-        ]
+              The future of quantum key distribution (QKD) is contingent on its ability to utilise the existing fibre infrastructure that makes up the global Internet. In this work, we explore the feasibility of quantum communications over 224~km of submarine fibre between the UK and Ireland. We characterise differential phase drift, polarisation stability and entangled photon arrival times to demonstrate the suitability of this fibre for several common implementations of QKD. 
+            ]
       ]
     ]
     
@@ -168,9 +182,10 @@
         #stack(dir: ltr,
         block(width: 50%)[
           #section("Introduction")[
-            Quantum key distribution (QKD) @bennett_quantum_2014 offers information-theoretically secure communications against an any eavesdropper, regardless of their computational capability. QKD is one of the most mature quantum technologies and several protocols have already seen commercial implementations. As the commercial viability of QKD continues to develop, long-haul international connections are increasingly important for demonstrating the feasibility of deployed QKD systems.
     
             We explore the suitability for QKD of euNetworks' 'Rockabill' link, which is a 224~km submarine fibre running between Portrane in the Republic of Ireland and Soutport in the United Kingdom. We consider optical phase, polarisation, and entangled photons to provide a broad view of the feasibility of future deployments of QKD. 
+            Quantum key distribution (QKD)@bennett_quantum_2014 offers information-theoretically secure communications against any eavesdropper, regardless of their computational capability.
+            QKD is one of the most mature quantum technologies@peev_SECOQC_2009 @wengerowsky_entanglement_2019 and several protocols have already seen commercial implementations. 
           ]
           #v(1cm)
           #block(width: auto, height: auto, fill: secondary, outset: 0.5cm)[
