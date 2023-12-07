@@ -289,8 +289,11 @@
           ]
           #v(1cm)
           #section("References")[
-            #set align(left)
-            #bibliography("BICOP 2023.bib", title: none)
+            #block()[
+              #set align(left)
+              #set block(spacing: 0.6em)
+              #bibliography("BICOP 2023.bib", title: none, style: "ieee-cite-collapse.csl")
+            ]
           ]
       ])
       ]
