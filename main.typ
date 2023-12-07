@@ -58,7 +58,7 @@
 #let affiliations = (
   "University of York; York YO10 5FT, UK",
   "euNetworks Fiber UK Limited; London E14 5HU, UK",
-  " Cyprus University of Technology; Limassol 3036, Cyprus",
+  "Cyprus University of Technology; Limassol 3036, Cyprus",
 )
 
 #let footer = align(bottom)[
@@ -170,7 +170,7 @@
           #section("Introduction")[
             Quantum key distribution (QKD) @bennett_quantum_2014 offers information-theoretically secure communications against an any eavesdropper, regardless of their computational capability. QKD is one of the most mature quantum technologies and several protocols have already seen commercial implementations. As the commercial viability of QKD continues to develop, long-haul international connections are increasingly important for demonstrating the feasibility of deployed QKD systems.
     
-            We explore the suitability for QKD of euNetworks' 'Rockabill' link, which is a 224~km submarine fibre running between Portrane in the Republic of Ireland and Soutport in the United Kingdom. We consider optical phase, polariastion, and entangled photons to provide a broad view of the feasibility of future deployments of QKD. 
+            We explore the suitability for QKD of euNetworks' 'Rockabill' link, which is a 224~km submarine fibre running between Portrane in the Republic of Ireland and Soutport in the United Kingdom. We consider optical phase, polarisation, and entangled photons to provide a broad view of the feasibility of future deployments of QKD. 
           ]
           #v(1cm)
           #block(width: auto, height: auto, fill: secondary, outset: 0.5cm)[
