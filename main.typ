@@ -168,12 +168,22 @@
 
 #block(height: 80%, width: 100%, fill: primary, inset: 0cm, spacing: -1cm, radius: (top-left: 2cm))[
   #block(height: 101%, width: 100%, radius: (top-right: 2cm), fill: white, inset: (y: 2cm), spacing: 0cm, outset: 0cm)[
-    #align(center)[
-      #block(width: 80%, height: auto, fill: secondary, inset: 1cm)[
-        #section("Abstract")[
-          #set text(size: 22pt)
+    #align(left)[
+      #block(width: 100%, height: auto)[
+        #set align(center + horizon);
+        #stack(dir: ltr,
+          block(width: 10%),
+          block(width: 80%, fill: secondary, inset: 1cm)[
+            #section("Abstract")[
+              #set text(size: 21pt)
               The future of quantum key distribution (QKD) is contingent on its ability to utilise the existing fibre infrastructure that makes up the global Internet. In this work, we explore the feasibility of quantum communications over 224~km of submarine fibre between the UK and Ireland. We characterise differential phase drift, polarisation stability and entangled photon arrival times to demonstrate the suitability of this fibre for several common implementations of QKD. 
             ]
+          ],
+          block(width: 10%, height: auto)[
+            #set align(center)
+            #image("images/qr.png", width: 70%)
+          ]
+        )
       ]
     ]
     
