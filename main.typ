@@ -192,17 +192,16 @@
         #stack(dir: ltr,
         block(width: 50%)[
           #section("Introduction")[
-    
-            We explore the suitability for QKD of euNetworks' 'Rockabill' link, which is a 224~km submarine fibre running between Portrane in the Republic of Ireland and Soutport in the United Kingdom. We consider optical phase, polarisation, and entangled photons to provide a broad view of the feasibility of future deployments of QKD. 
             Quantum key distribution (QKD)@bennett_quantum_2014 offers information-theoretically secure communications against any eavesdropper, regardless of their computational capability.
             QKD is one of the most mature quantum technologies@peev_SECOQC_2009 @wengerowsky_entanglement_2019 and several protocols have already seen commercial implementations. 
+            In this work, we explore the suitability for QKD of euNetworks' 'Rockabill' link, which is a 224~km submarine fibre running between Portrane in the Republic of Ireland and Southport in the United Kingdom. We consider optical phase, polarisation, and entangled photons to provide a broad view of the feasibility of future deployments of QKD. 
           ]
           #v(1cm)
           #block(width: auto, height: auto, fill: secondary, outset: 0.5cm)[
             #section("Key objectives")[
               #set align(left)
               #list(
-                [Characterising phase drift and polarisation stability of long-haul submarine fibre.],
+                [Characterising phase and polarisation stability of long-haul submarine fibre.],
                 [Emulating decoy-state BB84 with polarisation encoding.],
                 [Detecting coincident photons from an entangled photon source after traversing the channel.]            
               )
@@ -224,7 +223,7 @@
             To achieve this, we deployed our superconducting nanowire single-photon detector (SNSPD) system (IDQuantique ID281) in the Southport CLS.
             Each SNSPD channel has dark counts of around 50~Hz, with detection efficiency of \~90%.
           ]
-          #v(1cm)
+          #v(1%)
         ],
       block(width: 3%),
       block(width: 50%)[
@@ -252,7 +251,7 @@
                     #h(spacing, weak: true)
                     $eta_"det"$,
                     #h(spacing, weak: true)
-                    efficiency of the receiver
+                    receiver efficiency
                     #h(spacing, weak: true)
                     $eta _"rec"$,
                     #h(spacing, weak: true)
